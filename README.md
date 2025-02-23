@@ -57,14 +57,14 @@ python rag_with_chroma.py
 #### Note: A Gradio interface will launch in your browser. Enter a question (e.g., "What is GPT-4?") to see retrieved snippets and generated answers.
 
 
-### 5. Future Improvements
+## Future Improvements
 Fine-tune the generation model (e.g., sshleifer/distilbart-cnn-12-6 or t5-base) with domain-specific Q&A data.
 Add persistent storage for Chroma embeddings.
 Support multi-language papers and questions.
 Enhance text extraction for complex PDF formats using alternative libraries (e.g., pdfplumber).
 
-### 6. License
+## License
 MIT License - feel free to use, modify, and share!
 
-### 7. Contact
+## Contact
 For questions or suggestions, open an issue or reach out to [chaoquancai2019@gmail.com].
