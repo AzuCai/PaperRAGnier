@@ -31,11 +31,11 @@ Follow these steps to set up and run the project locally.
 git clone https://github.com/AzuCai/PaperRAGnizer.git
 cd PaperRAGnizer
 
-### 2. Prepare Papers
+2. Prepare Papers
 Create a folder named papers in the project root.
 Download research PDF papers (e.g., from arXiv) and place them in papers.
 
-### 3. Set Up the Environment
+3. Set Up the Environment
 Open Anaconda Prompt (Windows) or terminal (Linux/macOS) and run:
 
 # Create a new environment
@@ -49,3 +49,32 @@ conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvi
 # Install remaining dependencies
 pip install transformers sentence-transformers faiss-cpu gradio PyMuPDF chromadb tiktoken blobfile sentencepiece
 
+4. Run the Application
+Choose one of the two retrieval implementations:
+
+FAISS Version:
+python rag_with_faiss.py
+
+Chroma Version:
+python rag_with_chroma.py
+
+A Gradio interface will launch in your browser. Enter a question (e.g., "What is GPT-4?") to see retrieved snippets and generated answers.
+
+Project Structure
+PaperRAGnizer/
+├── papers/              # Folder for research paper PDFs
+├── rag_with_faiss.py    # RAG implementation with FAISS
+├── rag_with_chroma.py   # RAG implementation with Chroma
+└── README.md            # Project documentation
+
+Future Improvements
+Fine-tune the generation model (e.g., sshleifer/distilbart-cnn-12-6 or t5-base) with domain-specific Q&A data.
+Add persistent storage for Chroma embeddings.
+Support multi-language papers and questions.
+Enhance text extraction for complex PDF formats using alternative libraries (e.g., pdfplumber).
+
+License
+MIT License - feel free to use, modify, and share!
+
+Contact
+For questions or suggestions, open an issue or reach out to [chaoquancai2019@gmail.com/https://github.com/AzuCai].
